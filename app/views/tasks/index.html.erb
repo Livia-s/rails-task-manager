@@ -1,11 +1,13 @@
 <h1>List of Tasks</h1>
 <div class="container">
   <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <h3><%= link_to task.name, taks_path(task) %></h3>
-      <h4>Done:<%= tast.done %></h4>
+    <%= @tasks.each do |task| %>
+    <div class="col-xs-8 col-xs-offset-4">
+      <h3><%= link_to task.name, task_path(task) %></h3>
+      <h4>Done:<%= task.done %></h4>
       <%= link_to "Delete this task", task_path(task), method: "delete" %>
     </div>
     <% end %>
+    <%= link_to "New", new_task_path %>
   </div>
 </div>
