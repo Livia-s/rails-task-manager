@@ -1,0 +1,11 @@
+<h1>List of Tasks</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h3><%= link_to task.name, taks_path(task) %></h3>
+      <h4>Done:<%= tast.done %></h4>
+      <%= link_to "Delete this task", task_path(task), method: "delete" %>
+    </div>
+    <% end %>
+  </div>
+</div>
